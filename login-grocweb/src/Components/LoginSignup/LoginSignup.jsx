@@ -3,13 +3,14 @@ import './LoginSignup.css'
 import person_icon from '../Assets/person.png'
 import email_icon from '../Assets/mail.png'
 import password_icon from '../Assets/password.png'
+import bblogo from '../Assets/bblogo.jpg'
 
 const LoginSignup = () => {
 
     const [action,setAction] = useState("Sign Up");
   return (
     <div className='container'>
-        <div className="header">
+        <div className="header"> <img src={bblogo} style={{ width: '200px' }} />
             <div className="text">{action}</div>
             <div className="underline"></div>
         </div>
@@ -33,8 +34,8 @@ const LoginSignup = () => {
         {action==="Sign Up"?<div></div>:<div className="forgot-password">Forgot Password? <span>Click Here!</span></div>}
         
         <div className="submit-container">
-            <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
-            <div className={action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setAction("Login")}}>Login</div>
+            <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>SIGN UP</div>
+            <div className={action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setAction("Login")}}>LOGIN</div>
         </div>
     </div>
   )
